@@ -1,6 +1,7 @@
 import React from "react";
 import ellipse from "../images/ellipse.svg";
 import dataArtikel from "./DataArtikel";
+import { Link } from 'react-router-dom'
 
 const ListArtikel = () => {
     return (
@@ -22,7 +23,7 @@ const ListArtikel = () => {
                             key={id}
                             className="col-start-1 col-end-10 hover:shadow-lg hover:shadow-light-blue/50 rounded-lg transition-all"
                         >
-                            <a href="#" className="col-start-1 col-end-10 grid grid-cols-9">
+                            <Link to="/Artikelpage" className="col-start-1 col-end-10 grid grid-cols-9">
                                 <div className="col-start-1 col-end-6 space-y-4">
                                     <div className="flex items-center gap-4">
                                         <img src={avatar} alt="avatar picture" />
@@ -57,7 +58,7 @@ const ListArtikel = () => {
                                         className="w-full"
                                     />
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                     )
                 )}

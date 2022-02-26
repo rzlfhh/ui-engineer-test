@@ -9,9 +9,9 @@ import youtube from '../images/youtube.svg'
 
 const Footer = () => {
     return (
-        <footer className=' bg-very-dark-blue text-text-white px-[125px] py-[96px]'>
-            <div className='border grid grid-cols-12 grid-rows-1 gap-[30px] content-start items-start'>
-                <div className='border col-start-1 col-end-4 row-start-1 row-end-3 space-y-8'>
+        <footer className=' bg-very-dark-blue text-text-white px-[125px] pt-[96px] pb-[48px]'>
+            <div className='grid grid-cols-12 grid-rows-1 gap-[30px] content-start items-start'>
+                <div className='col-start-1 col-end-4 row-start-1 row-end-3 space-y-8'>
                     <div className='space-y-4'>
                         <label htmlFor="link" className='font-bold leading-[24px]'>Web Hosting</label>
                         <ul className='text-text-secondary2 text-[14px] leading-[24px] space-y-2'>
@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='border col-start-4 col-end-7 row-start-1 row-end-3 space-y-8'>
+                <div className='col-start-4 col-end-7 row-start-1 row-end-3 space-y-8'>
                     <div className='space-y-4'>
                         <label htmlFor="link" className='font-bold leading-[24px]'>Virtual Private Server</label>
                         <ul className='text-text-secondary2 text-[14px] leading-[24px] space-y-2'>
@@ -77,7 +77,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='border col-start-7 col-end-10 row-start-1 row-end-2 space-y-8'>
+                <div className='col-start-7 col-end-10 row-start-1 row-end-2 space-y-8'>
                     <div className='space-y-4'>
                         <label htmlFor="link" className='font-bold leading-[24px]'>Kemitraan</label>
                         <ul className='text-text-secondary2 text-[14px] leading-[24px] space-y-2'>
@@ -101,7 +101,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='border col-start-10 col-end-13 row-start-1 row-end-2 space-y-8 text-[14px] leading-[24px]'>
+                <div className='col-start-10 col-end-13 row-start-1 row-end-2 space-y-8 text-[14px] leading-[24px]'>
                     <img src={logofooter} alt="logo footer" className='w-full' />
                     <p>Misi kami adalah membantu jutaan orang memanfaatkan potensi yang ada di internet untuk membangun kesuksesan online.</p>
                     <p>Jl. Palagan Tentara Pelajar No 81 Jongkang, Sariharjo, Ngaglik, Sleman
@@ -113,21 +113,34 @@ const Footer = () => {
                     </ul>
                     <div>
                         <ul className='grid grid-cols-3 items-start w-fit gap-[18px]'>
-                            <li><a href="#"><img src={fb} alt="facebook" /></a></li>
-                            <li><a href="#"><img src={ig} alt="instagram" /></a></li>
-                            <li><a href="#"><img src={linkedin} alt="linkedin" /></a></li>
-                            <li><a href="#"><img src={twitter} alt="twitter" /></a></li>
-                            <li><a href="#"><img src={tiktok} alt="tiktok" /></a></li>
-                            <li><a href="#"><img src={youtube} alt="youtube" /></a></li>
+                            <li className='hover:scale-[1.1] transition-all'><a href="#"><img src={fb} alt="facebook" /></a></li>
+                            <li className='hover:scale-[1.1] transition-all'><a href="#"><img src={ig} alt="instagram" /></a></li>
+                            <li className='hover:scale-[1.1] transition-all'><a href="#"><img src={linkedin} alt="linkedin" /></a></li>
+                            <li className='hover:scale-[1.1] transition-all'><a href="#"><img src={twitter} alt="twitter" /></a></li>
+                            <li className='hover:scale-[1.1] transition-all'><a href="#"><img src={tiktok} alt="tiktok" /></a></li>
+                            <li className='hover:scale-[1.1] transition-all'><a href="#"><img src={youtube} alt="youtube" /></a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div className='border col-start-7 col-end-13 row-start-2 row-end-3 col-span-full space-y-6'>
+                <div className='col-start-7 col-end-13 row-start-2 row-end-3 col-span-full space-y-6'>
                     <label htmlFor="newsletter" className='font-bold leading-[24px]'>Newsletter</label>
                     <div className='flex items-center gap-4'>
                         <input type="email" placeholder='Write your input here' className='px-3 py-3 placeholder-text-secondary2 text-text-primary relative bg-white bg-white rounded-full text-sm border-0 shadow outline-none focus:outline-none focus:ring w-[60%] pl-8' />
                         <button className='bg-orange shadow-button-orange hover:bg-orange-hover font-bold w-[40%] h-[48px] rounded-full justify-center items-center'>Berlangganan</button>
+                    </div>
+                </div>
+
+                <div className='col-start-1 col-end-13 mt-8 flex items-start justify-between border-t-[1px] border-text-secondary pt-8'>
+                    <div className=''>
+                        <p className='text-[12px] leading-[20px] text-text-secondary2'>Copyright ©2021 Niagahoster | Hosting powered by PHP8, CloudLinux, CloudFlare, BitNinja and DC DCI-Indonesia | <br /> Cloud VPS Murah powered by Webuzo Softaculous, Intel SSD and cloud computing technology</p>
+                    </div>
+                    <div>
+                        <ul className='text-[12px] leading-[20px] flex items-center gap-2 justify-between'>
+                            <li><a href="#">Syarat dan Ketentuan</a></li>
+                            <span className='text-text-secondary2'>|</span>
+                            <li><a href="#">Kebijakan Privasi</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -2,12 +2,15 @@ import React from 'react'
 import logo from '../images/niagahoster-logo.svg'
 import trolley from '../images/trolley.svg'
 import arrowDown from '../images/arrow-down.svg'
+import { Link } from 'react-router-dom'
+import { classnames } from "classnames";
 
 const NavbarFullDesktop = () => {
+
     return (
-        <header className='text-text-white flex bg-hoster-blue justify-between items-center py-6 px-[40px] bg-yellow sticky top-0 left-0 right-0 z-[999]'>
+        <header className="text-text-white flex bg-hoster-blue justify-between items-center py-6 px-[40px] bg-yellow sticky top-0 left-0 right-0 z-[999]">
             <div className=''>
-                <a href="#"><img src={logo} alt="logo niagahoster" className='w-full' /></a>
+                <Link to="/"><img src={logo} alt="logo niagahoster" className='w-full' /></Link>
             </div>
             <nav className=''>
                 <ul className='flex items-center gap-9 font-semibold'>
