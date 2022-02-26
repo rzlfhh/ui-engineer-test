@@ -1,13 +1,13 @@
-import NavbarFullDesktop from './components/NavbarFullDesktop';
-import NavMenu from './components/NavMenu';
+import Cta from './components/Cta';
+import Footer from './components/Footer';
 import Homepage from './pages/Homepage'
 
 function App() {
   return (
     <>
-      <NavbarFullDesktop />
-      <NavMenu />
       <Homepage />
+      <Cta />
+      <Footer />
     </>
   );
 }

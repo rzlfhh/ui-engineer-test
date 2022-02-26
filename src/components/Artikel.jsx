@@ -8,7 +8,7 @@ import Pagination from './Pagination'
 
 const Artikel = () => {
     return (
-        <section className='relative grid grid-cols-12 gap-[30px] mx-[125px] pt-[80px] items-start'>
+        <section className='relative grid grid-cols-12 gap-[30px] mx-[125px] pt-[80px] items-start mb-[120px]'>
             <div className='col-start-1 col-end-10 grid grid-cols-9'>
                 <Heading
                     iconArtikel={terbaru}
@@ -32,7 +32,7 @@ const Artikel = () => {
                         <p className='text-light-blue'>Kami akan mengirimkan pemberitahuan artikel terbaru kami melalui email Anda. Ingin mendapatkan pemberitahuan?</p>
                     </div>
                     <div className='w-[42%] items-center text-center'>
-                        <button className='bg-orange font-bold text-[1.25rem] w-full h-[3.5rem] rounded-full'>Langganan Sekarang</button>
+                        <button className='bg-orange hover:bg-orange-hover shadow-button-orange font-bold text-[1.25rem] w-full h-[3.5rem] rounded-full'>Langganan Sekarang</button>
                     </div>
                 </div>
 
