@@ -1,11 +1,11 @@
 import React from 'react'
 import ellipse from "../images/ellipse.svg";
 import dataSemuaArtikel from "./DataSemuaArtikel";
+import { Link } from 'react-router-dom'
 
 const ListSemuaArtikel = () => {
     return (
-        <ul className='col-start-1 col-end-10 grid grid-cols-3 gap-[30px] mt-[36px]'>
-
+        <>
             {dataSemuaArtikel.map(
                 ({
                     id,
@@ -19,7 +19,7 @@ const ListSemuaArtikel = () => {
                     artikelimg, }) => (
 
                     <li key={id} className='hover:scale-[1.03] transition-all'>
-                        <a href="#" className='space-y-3'>
+                        <Link to="/Artikelpage" className='space-y-3'>
                             <div>
                                 <img src={artikelimg} alt="image artikel" className='w-full' />
                             </div>
@@ -47,10 +47,10 @@ const ListSemuaArtikel = () => {
                                     <p>{readtime}</p>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 ))}
-        </ul>
+        </>
     )
 }
 

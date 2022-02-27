@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     colors: {
@@ -28,7 +29,8 @@ module.exports = {
       },
       boxShadow: {
         'button-orange': '0 8px 10px rgba(255, 176, 77, 0.32)',
-      }
+        'cta-card': '0 32px 72px rgba(0, 87, 178, 0.16)',
+      },
     },
   },
   plugins: [],

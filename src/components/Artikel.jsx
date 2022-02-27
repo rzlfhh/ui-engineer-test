@@ -5,6 +5,8 @@ import populer from '../images/icon-populer.svg'
 import ListArtikel from './ListArtikel'
 import ListSemuaArtikel from './ListSemuaArtikel'
 import Pagination from './Pagination'
+import Accordion from './Accordion'
+import search from '../images/search-icon.svg'
 
 const Artikel = () => {
     return (
@@ -26,7 +28,7 @@ const Artikel = () => {
                 <ListArtikel />
                 <button className='text-hoster-blue col-start-1 col-end-10 w-fit text-center mx-auto font-bold mt-8 mb-[80px]'>Lihat Semua Artikel</button>
 
-                <div className='col-start-1 col-end-10 bg-hoster-blue text-text-white flex items-center justify-between h-[14.5rem] rounded-[24px] gap-12 p-[2.625rem] mb-[80px]'>
+                <div className='col-start-1 col-end-10 bg-hoster-blue text-text-white flex items-center justify-between h-[14.5rem] rounded-[24px] gap-12 p-[2.625rem] mb-[80px] shadow-cta-card'>
                     <div className='w-[50%] space-y-4'>
                         <h2 className='font-bold text-[1.5rem]'>Ingin jadi yang pertama tau artikel terbaru kami?</h2>
                         <p className='text-light-blue'>Kami akan mengirimkan pemberitahuan artikel terbaru kami melalui email Anda. Ingin mendapatkan pemberitahuan?</p>
@@ -39,13 +41,30 @@ const Artikel = () => {
                 <Heading
                     text="Semua Artikel"
                 />
-                <ListSemuaArtikel />
+
+                <ul className='col-start-1 col-end-10 grid grid-cols-3 gap-[30px] mt-[36px]'>
+                    <ListSemuaArtikel />
+                    <ListSemuaArtikel />
+                    <ListSemuaArtikel />
+                </ul>
+
 
                 <Pagination />
             </div>
 
-            <div className='border col-start-10 col-end-13 sticky top-[5.6em] right-0 left-0 overflow-visible'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat modi ipsa itaque delectus, error eligendi impedit quas aliquid libero illum distinctio illo magni! Iure deleniti corrupti eveniet dolorem eum at maxime. Deleniti accusantium minus officiis alias odit asperiores provident facilis qui, a quae consectetur ut neque natus, corporis quisquam blanditiis quam iusto corrupti. Eligendi rerum veniam exercitationem expedita perferendis cum reiciendis quasi placeat, in, adipisci facere non esse reprehenderit aut amet sequi dolores, a id omnis nobis! Quod explicabo ad quaerat labore accusamus. Officia autem, ullam possimus, amet laboriosam atque earum qui similique ad iusto provident cumque quae ab officiis.
+            <div className=' col-start-10 col-end-13 sticky top-[6.6em] right-0 left-0 space-y-[36px]'>
+                <div>
+                    <div className="relative flex flex-wrap items-stretch mx-auto w-full h-[48px]">
+                        <input type="text" placeholder="Cari artikel blog . . ." className="px-3 py-3 placeholder-text-secondary2 text-text-primary relative bg-white border border-text-secondary2 bg-white rounded-full text-sm outline-none focus:outline-none focus:ring w-full pl-4" />
+                        <span className="z-10 h-full absolute text-center items-center justify-center w-8 right-[8px] pr-3 py-3">
+                            <img src={search} alt="search icon" />
+                        </span>
+                    </div>
+                </div>
+                <div className='p-4 space-y-[24px]'>
+                    <h3 className='font-bold text-[20px] leading-[26px]'>Kategori Blog</h3>
+                    <Accordion />
+                </div>
             </div>
         </section>
     )
