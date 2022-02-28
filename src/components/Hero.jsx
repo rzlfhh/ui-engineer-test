@@ -4,7 +4,17 @@ import search from '../images/search-icon.svg'
 const Hero = () => {
     return (
         <section className='text-center text-text-white bg-hoster-blue bg-nature-light bg-no-repeat bg-center static top-0 left-0 right-0 pt-[72px] pb-[78px] -z-10'>
-            <h1 className='text-[3.5em] font-bold leading-[64px] w-[38%] mx-auto '>Dapatkan Artikel Tutorial Hosting Terbaik Disini</h1>
+            {/* <h1 className='text-[3.5em] font-bold leading-[64px] w-[38%] mx-auto '>Dapatkan Artikel Tutorial Hosting Terbaik Disini</h1> */}
+            <div className='text-[3.5em] font-bold leading-[64px] w-fit mx-auto '>
+                Dapatkan Artikel
+                <div id="flip" className='transition-all'>
+                    <div><div>Tutorial Hosting</div></div>
+                    <div><div>Tutorial Website</div></div>
+                    <div><div>Digital Marketing</div></div>
+                    <div><div>Tutorial Design Website</div></div>
+                </div>
+                Terbaik Disini
+            </div>
             <p className='text-text-v-soft-blue mt-8'>Temukan artikel berisi solusi terbaik untuk segala permasalahan Anda</p>
 
             <div className="relative flex flex-wrap items-stretch mt-12 mx-auto w-[540px] h-[48px]">

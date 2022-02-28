@@ -18,7 +18,7 @@ const ListSemuaArtikel = () => {
                     readtime,
                     artikelimg, }) => (
 
-                    <li key={id} className='hover:scale-[1.03] transition-all'>
+                    <li key={id} className='transition-transform hover:-translate-y-2'>
                         <Link to="/Artikelpage" className='space-y-3'>
                             <div>
                                 <img src={artikelimg} alt="image artikel" className='w-full' />

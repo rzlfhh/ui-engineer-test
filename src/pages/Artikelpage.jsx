@@ -85,7 +85,7 @@ const Artikelpage = () => {
                                 </div>
                                 <div className=''>
                                     <ul className='flex items-center gap-[24px] text-text-secondary font-semibold'>
-                                        <li><button className='flex items-center gap-3 text-[12px]'><img src={like} alt="like" className='hover:fill-hoster-blue'/><p>{dataArtikel[0].like}</p></button></li>
+                                        <li><button className='flex items-center gap-3 text-[12px]'><img src={like} alt="like" className='hover:fill-hoster-blue' /><p>{dataArtikel[0].like}</p></button></li>
                                         <li><button onClick={() => setOpen(true)} className='flex items-center gap-3 text-[12px]'><img src={comments} alt="comments" />{dataArtikel[0].commentsartikel.length}</button></li>
                                         <li><button className='flex items-center gap-3 text-[12px]'><img src={share} alt="share" />Share</button></li>
                                     </ul>
@@ -167,16 +167,17 @@ const Artikelpage = () => {
                         <button className='bg-orange hover:bg-orange-hover shadow-button-orange font-bold text-[1.25rem] w-full h-[3.5rem] rounded-full'>Langganan Sekarang</button>
                     </div>
                 </div>
+            </main>
 
-                {/* ARTIKEL TERKAIT */}
-                <div className='col-start-1 col-end-13 space-y-[36px]  py-[80px] bg-text-v-soft-blue'>
+            {/* ARTIKEL TERKAIT */}
+            <div className='grid grid-cols-12 gap-[30px] px-[125px] bg-text-v-soft-blue'>
+                <div className='col-start-1 col-end-13 space-y-[36px] py-[80px] '>
                     <h2 className='font-bold text-[32px] leading-[42px] text-center'>Baca Artikel Terkait</h2>
                     <ul className='grid grid-cols-4 gap-[30px] mt-[36px]'>
                         <ListSemuaArtikel />
                     </ul>
                 </div>
-
-            </main>
+            </div>
 
 
         </>
