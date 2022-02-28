@@ -11,7 +11,6 @@ import search from '../images/search-icon.svg'
 const Artikel = () => {
     return (
         <>
-
             <section className='relative grid grid-cols-12 gap-[30px] mx-[125px] pt-[80px] items-start mb-[120px]'>
                 <div className='col-start-1 col-end-10 grid grid-cols-9'>
                     <Heading
@@ -57,7 +56,7 @@ const Artikel = () => {
                 <div className=' col-start-10 col-end-13 sticky top-[6.6em] right-0 left-0 space-y-[36px]'>
                     <div>
                         <div className="relative flex flex-wrap items-stretch mx-auto w-full h-[48px]">
-                            <input type="text" placeholder="Cari artikel blog . . ." className="px-3 py-3 placeholder-text-secondary2 text-text-primary relative bg-white border border-text-secondary2 bg-white rounded-full text-sm outline-none focus:outline-none focus:ring w-full pl-4" />
+                            <input type="text" placeholder="Cari artikel blog . . ." className="px-3 py-3 placeholder-text-secondary2 text-text-primary relative bg-white border border-text-secondary2 bg-white rounded-full text-sm outline-none focus:outline-none focus:border-hoster-blue focus:border-2 transition-all w-full pl-4" />
                             <span className="z-10 h-full absolute text-center items-center justify-center w-8 right-[8px] pr-3 py-3">
                                 <img src={search} alt="search icon" />
                             </span>

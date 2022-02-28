@@ -3,7 +3,6 @@ import logo from '../images/niagahoster-logo.svg'
 import trolley from '../images/trolley.svg'
 import arrowDown from '../images/arrow-down.svg'
 import { Link } from 'react-router-dom'
-import { classnames } from "classnames";
 
 const NavbarFullDesktop = () => {
 
@@ -27,10 +26,10 @@ const NavbarFullDesktop = () => {
                 <button>
                     <img src={trolley} alt="trolley button" />
                 </button>
-                <div className='flex items-center gap-2'>
-                    <p>ID</p>
+                <button className='flex items-center gap-2'>
+                    ID
                     <img src={arrowDown} alt="arrow down" />
-                </div>
+                </button>
                 <button className='px-6 py-2 border-[2px] rounded-full font-bold text-[14px]'>Login</button>
             </div>
         </header>

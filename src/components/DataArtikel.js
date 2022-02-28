@@ -63,7 +63,7 @@ const dataArtikel = [
                         name: "Adam Muiz",
                         avatar: adam,
                         time: "29 hari yang lalu",
-                        role: "Author",
+                        role: "Authordata",
                         comments: "Bisa melakukan pengecekan melalui Urlvoid atau fitur secamanya, bisa juga melalui google di url http://www.google.com/safebrowsing/diagnostic site=namasiteanda",
                     },
                 ],

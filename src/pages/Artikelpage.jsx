@@ -14,6 +14,8 @@ import logo from '../images/niagahoster-logo.svg'
 import trolley from '../images/trolley.svg'
 import arrowDown from '../images/arrow-down.svg'
 import { Link } from 'react-router-dom'
+import Collapse from '../components/Collapse';
+import Visible from '../components/Visible';
 
 const Artikelpage = () => {
 
@@ -54,7 +56,11 @@ const Artikelpage = () => {
             </header>
             <NavMenu />
             <main className=' grid grid-cols-12 gap-[30px] mx-[125px] items-start pt-[54px]'>
-                <div className='col-start-1 col-end-4 '>kosong sementara</div>
+                {/* fixed article aside */}
+                <div className='col-start-1 col-end-4 sticky top-4 left-0 right-0'>
+                    <Visible />
+                </div>
+
                 <div className='col-start-4 col-end-11 '>
                     <Breadcrumbs />
                     <div className='mt-[42px]  space-y-[36px]'>
@@ -79,7 +85,7 @@ const Artikelpage = () => {
                                 </div>
                                 <div className=''>
                                     <ul className='flex items-center gap-[24px] text-text-secondary font-semibold'>
-                                        <li><button className='flex items-center gap-3 text-[12px]'><img src={like} alt="like" /><p>{dataArtikel[0].like}</p></button></li>
+                                        <li><button className='flex items-center gap-3 text-[12px]'><img src={like} alt="like" className='hover:fill-hoster-blue'/><p>{dataArtikel[0].like}</p></button></li>
                                         <li><button onClick={() => setOpen(true)} className='flex items-center gap-3 text-[12px]'><img src={comments} alt="comments" />{dataArtikel[0].commentsartikel.length}</button></li>
                                         <li><button className='flex items-center gap-3 text-[12px]'><img src={share} alt="share" />Share</button></li>
                                     </ul>
@@ -100,6 +106,13 @@ const Artikelpage = () => {
                                 <p>{dataArtikel[0].p3}</p>
                                 <p>{dataArtikel[0].p4}</p>
                             </div>
+
+                            {/* collapse div */}
+                            <div className={`border p-[32px] rounded-[10px] border-outline`}>
+                                <Collapse />
+                            </div>
+
+
                             <h2 className='font-bold text-[28px] leading-[36px]'>{dataArtikel[0].subhead1}</h2>
 
                             <div className='space-y-4'>
