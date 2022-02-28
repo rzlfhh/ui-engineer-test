@@ -12,6 +12,8 @@ module.exports = {
       'orange': '#FF9800',
       'orange-hover': '#ED8E01',
       'outline': '#D9DDE3',
+      'black': '#000000',
+      'time': '#7F8895',
 
       'text-primary': '#29384E',
       'text-secondary': '#546071',

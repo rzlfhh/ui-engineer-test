@@ -1,5 +1,4 @@
 import React from 'react'
-import NavbarFullDesktop from '../components/NavbarFullDesktop'
 import { useEffect } from 'react'
 import NavMenu from '../components/NavMenu'
 import dataArtikel from "../components/DataArtikel";
@@ -9,8 +8,16 @@ import like from "../images/like-icon.svg";
 import comments from "../images/comments-icon.svg";
 import share from "../images/share-icon.svg";
 import ListSemuaArtikel from '../components/ListSemuaArtikel';
+import { useState } from 'react'
+import Modal from '../components/Modal';
+import logo from '../images/niagahoster-logo.svg'
+import trolley from '../images/trolley.svg'
+import arrowDown from '../images/arrow-down.svg'
+import { Link } from 'react-router-dom'
 
 const Artikelpage = () => {
+
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -18,7 +25,33 @@ const Artikelpage = () => {
 
     return (
         <>
-            <NavbarFullDesktop />
+            {/* Header */}
+            <header className="text-text-white flex bg-hoster-blue justify-between items-center py-6 px-[40px] bg-yellow z-[999]">
+                <div className=''>
+                    <Link to="/"><img src={logo} alt="logo niagahoster" className='w-full' /></Link>
+                </div>
+                <nav className=''>
+                    <ul className='flex items-center gap-9 font-semibold'>
+                        <li className=''><a href="#">Hosting</a></li>
+                        <li><a href="#">Vps</a></li>
+                        <li><a href="#">Domain</a></li>
+                        <li><a href="#">Website</a></li>
+                        <li><a href="#">Kemitraan</a></li>
+                        <li><a href="#">Wawasan</a></li>
+                        <li><a href="#">Acara</a></li>
+                    </ul>
+                </nav>
+                <div className='flex items-center gap-4 '>
+                    <button>
+                        <img src={trolley} alt="trolley button" />
+                    </button>
+                    <div className='flex items-center gap-2'>
+                        <p>ID</p>
+                        <img src={arrowDown} alt="arrow down" />
+                    </div>
+                    <button className='px-6 py-2 border-[2px] rounded-full font-bold text-[14px]'>Login</button>
+                </div>
+            </header>
             <NavMenu />
             <main className=' grid grid-cols-12 gap-[30px] mx-[125px] items-start pt-[54px]'>
                 <div className='col-start-1 col-end-4 '>kosong sementara</div>
@@ -47,7 +80,7 @@ const Artikelpage = () => {
                                 <div className=''>
                                     <ul className='flex items-center gap-[24px] text-text-secondary font-semibold'>
                                         <li><button className='flex items-center gap-3 text-[12px]'><img src={like} alt="like" /><p>{dataArtikel[0].like}</p></button></li>
-                                        <li><button className='flex items-center gap-3 text-[12px]'><img src={comments} alt="comments" />{dataArtikel[0].comments}</button></li>
+                                        <li><button onClick={() => setOpen(true)} className='flex items-center gap-3 text-[12px]'><img src={comments} alt="comments" />{dataArtikel[0].commentsartikel.length}</button></li>
                                         <li><button className='flex items-center gap-3 text-[12px]'><img src={share} alt="share" />Share</button></li>
                                     </ul>
                                 </div>
@@ -102,12 +135,13 @@ const Artikelpage = () => {
                             <ul className='flex items-center justify-between gap-[24px] text-text-secondary font-semibold'>
                                 <div className='flex items-center space-x-[36px] font-semibold'>
                                     <li><button className='flex items-center gap-3 text-[20px]'><img src={like} alt="like" />{dataArtikel[0].like}</button></li>
-                                    <li><button className='flex items-center gap-3 text-[20px]'><img src={comments} alt="comments" />{dataArtikel[0].comments}</button></li>
+                                    <li><button onClick={() => setOpen(true)} className='flex items-center gap-3 text-[20px]'><img src={comments} alt="comments" />{dataArtikel[0].commentsartikel.length}</button></li>
                                 </div>
                                 <li><button className='flex items-center gap-3 text-[20px]'><img src={share} alt="share" />Share</button></li>
                             </ul>
                         </div>
                     </div>
+                    <Modal open={open} onClose={() => setOpen(false)} />
                 </div>
 
                 {/* CTA */}
@@ -130,6 +164,8 @@ const Artikelpage = () => {
                 </div>
 
             </main>
+
+
         </>
     )
 }

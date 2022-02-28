@@ -1,5 +1,6 @@
 import artikelimage from "../images/artikel-img.png";
 import avatar from "../images/avatar.svg";
+import adam from "../images/adam.png";
 
 const dataArtikel = [
     {
@@ -14,7 +15,6 @@ const dataArtikel = [
         readtime: "5 min read",
         artikelimg: artikelimage,
         like: 111,
-        comments: 4,
         p1: "Anda ingin tahu cara cek IP hosting? Selamat, Anda berada di halaman yang tepat!",
         p2: "IP hosting adalah barisan angka sebagai identitas unik dari suatu hosting website.Dengan IP tersebut, website Anda dapat dikenali dan diakses melalui jaringan internet.",
         p3: "Saat Anda mengakses website, Anda memang tidak bisa melihat IP secara langsung.Alasannya, IP tersebut sudah diwakili oleh sebuah domain agar lebih mudah diingat.",
@@ -31,6 +31,46 @@ const dataArtikel = [
         kesimpulan5: "Tak hanya itu, Anda bisa juga menambahkan banyak domain pada akun hosting Anda berkat fitur Unlimited Addon Domain.Itu pun masih ditambah dengan SSL gratis yang bisa digunakan untuk menjaga keamanan website Anda.",
         kesimpulan6: "Menariknya, semua layanan tersebut bisa Anda dapatkan dengan harga mulai dari Rp21rb/ bulan saja.Harga yang cukup murah untuk fitur canggih dan layanan berkualitas, bukan ?",
         kesimpulan7: "Jadi, tunggu apa lagi ? Yuk, dapatkan domain gratis dengan berlangganan web hosting Niagahoster sekarang!",
+
+        commentsartikel: [
+            {
+                id: 1,
+                name: "Adam Muiz",
+                avatar: adam,
+                time: "29 hari yang lalu",
+                comment: "makasih kak udah berbagi informasi hehe",
+                replies: [],
+                like: [],
+            },
+            {
+                id: 2,
+                name: "Adam Muiz",
+                avatar: adam,
+                time: "29 hari yang lalu",
+                comment: "Lagi coba host-tracker trial 30 day, bisa mantau uptime webiste, cukup membantu. Sebenarnya kalau mantau juga bisa pakai JetPack, cuma karena berhubung pluginnya berat jadi cari alternatif lain buat pantau.",
+                replies: [],
+                like: [],
+            },
+            {
+                id: 3,
+                name: "Adam Muiz",
+                avatar: adam,
+                time: "29 hari yang lalu",
+                comment: "kalau untuk cek kesehatan websitenya sendiri bagaimana gan ?",
+                replies: ['Bisa melakukan pengecekan melalui Urlvoid atau fitur secamanya, bisa juga melalui google di url http://www.google.com/safebrowsing/diagnostic?site=namasiteanda'],
+                like: [],
+            },
+            {
+                id: 4,
+                name: "Adam Muiz",
+                avatar: adam,
+                time: "29 hari yang lalu",
+                comment: "Lagi coba host-tracker trial 30 day, bisa mantau uptime webiste, cukup membantu. Sebenarnya kalau mantau juga bisa pakai JetPack, cuma karena berhubung pluginnya berat jadi cari alternatif lain buat pantau.",
+                replies: [],
+                like: [],
+            },
+        ],
+
     },
     {
         id: 2,
