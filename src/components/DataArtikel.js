@@ -57,7 +57,16 @@ const dataArtikel = [
                 avatar: adam,
                 time: "29 hari yang lalu",
                 comment: "kalau untuk cek kesehatan websitenya sendiri bagaimana gan ?",
-                replies: ['Bisa melakukan pengecekan melalui Urlvoid atau fitur secamanya, bisa juga melalui google di url http://www.google.com/safebrowsing/diagnostic?site=namasiteanda'],
+                replies: [
+                    {
+                        id: 1,
+                        name: "Adam Muiz",
+                        avatar: adam,
+                        time: "29 hari yang lalu",
+                        role: "Author",
+                        comments: "Bisa melakukan pengecekan melalui Urlvoid atau fitur secamanya, bisa juga melalui google di url http://www.google.com/safebrowsing/diagnostic site=namasiteanda",
+                    },
+                ],
                 like: [],
             },
             {
