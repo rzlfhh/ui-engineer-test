@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import NavMenu from '../components/NavMenu'
 import dataArtikel from "../components/DataArtikel";
-import Breadcrumbs from '../components/Breadcrumbs';
+import Breadcrumbss from '../components/Breadcrumbs';
 import ellipse from "../images/ellipse.svg";
 import like from "../images/like-icon.svg";
 import comments from "../images/comments-icon.svg";
@@ -62,7 +62,7 @@ const Artikelpage = () => {
                 </div>
 
                 <div className='col-start-4 col-end-11 '>
-                    <Breadcrumbs />
+                    <Breadcrumbss />
                     <div className='mt-[42px]  space-y-[36px]'>
                         <header className='space-y-4'>
                             {/* TITLE */}

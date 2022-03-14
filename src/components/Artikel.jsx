@@ -4,8 +4,8 @@ import terbaru from '../images/icon-terbaru.svg'
 import populer from '../images/icon-populer.svg'
 import ListArtikel from './ListArtikel'
 import ListSemuaArtikel from './ListSemuaArtikel'
-import Pagination from './Pagination'
-import Accordion from './Accordion'
+import Paginations from './Pagination'
+import Accordions from './Accordion'
 import search from '../images/search-icon.svg'
 
 const Artikel = () => {
@@ -50,7 +50,7 @@ const Artikel = () => {
                     </ul>
 
 
-                    <Pagination />
+                    <Paginations />
                 </div>
 
                 <div className=' col-start-10 col-end-13 sticky top-[6.6em] right-0 left-0 space-y-[36px]'>
@@ -64,7 +64,7 @@ const Artikel = () => {
                     </div>
                     <div className='p-4 space-y-[24px]'>
                         <h3 className='font-bold text-[20px] leading-[26px]'>Kategori Blog</h3>
-                        <Accordion />
+                        <Accordions />
                     </div>
                 </div>
             </section>
